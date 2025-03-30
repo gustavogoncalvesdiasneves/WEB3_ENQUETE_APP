@@ -102,5 +102,5 @@ _idEnquete = 1  // ID da enquete para visualizar detalhes
 
 ## 🚀 Melhorias Futuras
 - ✅ **Lista de permissões** para criação de enquetes.
-- ✅ **Sistema de tokens** para permitir votos com tokens criados na BNB Smart Chain Testnet.
+- ✅ **Sistema de tokens** para permitir votos com tokens [PG4Coin Testnet](https://github.com/gustavogoncalvesdiasneves/PG4_TOKEN_PROJECT) .
 
