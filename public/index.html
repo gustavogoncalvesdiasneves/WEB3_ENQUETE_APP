@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DePoll - Sistema de Enquetes</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+          console.log(typeof ethers); // Deve mostrar "object"
+          if (typeof ethers === "undefined") {
+              console.error("Ethers.js não carregou!");
+          }
+      });
+  </script>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 22 8-8"/><path d="M12 22 4 14"/><path d="m15 5-3-3-3 3"/><path d="m15 5-3 3-3-3"/><path d="M12 22V2"/></svg>
+                <span>DePoll</span>
+            </div>
+            <div class="nav-links">
+                <button onclick="showTab('home')" class="nav-button active">Enquetes Ativas</button>
+                <button onclick="showTab('create')" class="nav-button">Criar Enquete</button>
+                <button onclick="showTab('manage')" class="nav-button">Gerenciar Enquetes</button>
+            </div>
+            <div class="wallet-info">
+                <button id="connectWallet" onclick="connectWallet()">Conectar Carteira</button>
+                <span id="walletAddress" style="display: none;"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div id="home" class="tab-content active">
+            <div class="polls-grid" id="activePolls"></div>
+        </div>
+
+        <div id="create" class="tab-content">
+            <div class="create-poll-form">
+                <h2>Criar Nova Enquete</h2>
+                <div class="form-group">
+                    <label for="pollTitle">Título da Enquete</label>
+                    <input type="text" id="pollTitle" placeholder="Digite o título da enquete">
+                </div>
+                <div class="form-group">
+                    <label>Opções</label>
+                    <div id="optionsContainer">
+                        <input type="text" class="poll-option" placeholder="Opção 1">
+                        <input type="text" class="poll-option" placeholder="Opção 2">
+                    </div>
+                    <button onclick="addOption()" class="secondary-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>
+                        Adicionar Opção
+                    </button>
+                </div>
+                <button onclick="createPoll()" class="primary-button">Criar Enquete</button>
+            </div>
+        </div>
+
+        <div id="manage" class="tab-content">
+            <div class="polls-grid" id="managedPolls"></div>
+        </div>
+        
+        <button id="addBnbTestnet" onclick="addBnbTestnet()">
+          Adicionar Rede BNB Smart Chain Testnet
+        </button>
+
+        <button id="requestBNB" onclick="requestTestBNB()">
+          Solicitar BNB (Testnet)
+          <span>para poder votar</span>
+       </button>      
+      
+    </main>
+
+    <script src="./app.js"></script>
+</body>
+</html>

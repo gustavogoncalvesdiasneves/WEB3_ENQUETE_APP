@@ -1,0 +1,227 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "idEnquete",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "titulo",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "criador",
+						"type": "address"
+					}
+				],
+				"name": "enqueteCriada",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "idEnquete",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "criador",
+						"type": "address"
+					}
+				],
+				"name": "enqueteEncerrada",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "idEnquete",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "indiceOpcao",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "votante",
+						"type": "address"
+					}
+				],
+				"name": "votoRegistrado",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_titulo",
+						"type": "string"
+					},
+					{
+						"internalType": "string[]",
+						"name": "_opcoes",
+						"type": "string[]"
+					}
+				],
+				"name": "criarEnquete",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_idEnquete",
+						"type": "uint256"
+					}
+				],
+				"name": "encerrarEnquete",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "enquetes",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "titulo",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "criador",
+						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "ativa",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_idEnquete",
+						"type": "uint256"
+					}
+				],
+				"name": "obterEnquete",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "titulo",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "ativa",
+						"type": "bool"
+					},
+					{
+						"internalType": "string[]",
+						"name": "nomesOpcoes",
+						"type": "string[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "votosOpcoes",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_idEnquete",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_indiceOpcao",
+						"type": "uint256"
+					}
+				],
+				"name": "votar",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/5_Enquetes.sol": "Enquete"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/5_Enquetes.sol": {
+			"keccak256": "0xf74b7750467849da3ede2fb327bdafd65caad1c5b196c2f8f34dfc314673f8b3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7f395e2f61490ce283d7fc51d29d58c2b7e3bd09776b29b05dd8237953d844bf",
+				"dweb:/ipfs/QmZjDPKGCTMaDQEnv73JAuc1AxhxhEbvbQLjidve1EMMmk"
+			]
+		}
+	},
+	"version": 1
+}
