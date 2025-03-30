@@ -14,8 +14,8 @@ public/
 
 ---
 
-## 📜 Sobre o Contrato `Enquete.sol`
-O contrato `Enquete.sol` permite a criação, votação e encerramento de enquetes na rede BNB Smart Chain Testnet.
+## 📜 Sobre o Contrato `4_Enquete.sol`
+O contrato `4_Enquete.sol` permite a criação, votação e encerramento de enquetes na rede BNB Smart Chain Testnet.
 
 ### 🏗 Estruturas de Dados
 - **OpcaoVoto**: Representa uma opção de voto dentro de uma enquete.
